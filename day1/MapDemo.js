@@ -1,35 +1,48 @@
-let users=[
+let users1=[
     {
         name:'Vinay',
         age:22,
-        city:'Bangalore'
+        city:'Bangalore',
+        salary:22000
     },
     {
         name:'Naveen',
         age:24,
-        city:'Chennai'
-    },    {
+        city:'Chennai',
+        salary:25000
+    },    
+    {
         name:'Madhu',
         age:33,
-        city:'Mumbai'
+        city:'Mumbai',
+        salary:35000
     },   
     {
         name:'Kiran',
         age:38,
-        city:'Pune'
+        city:'Pune',
+        salary:30000
     },   
     {
         name:'Jeeven',
         age:44,
-        city:'Vizag'
+        city:'Vizag',
+        salary:55000
     }
 ];
 
-let userNames = users.map(user=> user.name);
+/*let userNames = users.map(user=> user.name);
 //console.log(userNames);
 
 let peopleMoreThan30 = users.filter(user => user.age > 30);
 let peopleLessThan30 = users.filter(user => user.age < 30);
 
-let userNamesLessThan30 = users.filter(user => user.age > 30).map(user => user.name);
+let userNamesLessThan30 = users.filter(user => user.age > 30)
+                                .map(user => user.name);
 console.log(userNamesLessThan30);
+*/
+let totalUsersSalary = users1.map(user => user.salary).reduce((p, c)=> {
+  
+    return p * c;
+}, 1);
+console.log(`The total salary is ${totalUsersSalary}`)
