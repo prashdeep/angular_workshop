@@ -45,4 +45,14 @@ let totalUsersSalary = users1.map(user => user.salary).reduce((p, c)=> {
   
     return p * c;
 }, 1);
-console.log(`The total salary is ${totalUsersSalary}`)
+//console.log(`The total salary is ${totalUsersSalary}`)
+
+//users1.map(user => user.name).forEach(name => console.log(name));
+users1.sort((user1, user2)=> {
+    if (user1.age > user2.age){
+        return 1;
+    } else if (user1.age < user2.age ){
+        return -1;
+    } 
+    return 0;
+}).map(user => user.name).forEach(name => console.log(name))
