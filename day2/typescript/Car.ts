@@ -62,6 +62,10 @@ export class Car implements Speeding{
     halt(){
         this._speed = 0;
     }
+
+    getSpeed():number{
+        return this._speed;
+    }
  
 }
 
@@ -71,10 +75,3 @@ export class Car implements Speeding{
   3.
 */
 
-interface Speeding {
-
-    accelerate(value:number);
-    slowDown(value:number);
-    halt();
-
-}
