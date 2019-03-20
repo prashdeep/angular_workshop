@@ -11,10 +11,13 @@
           <img src="{{course.imgSrc}}" style="width:100px; height:100px;"/> -->
           <!-- Property Binding-->
           <img [src]="course.imgSrc" style="width:100px; height:100px;"/>
-          <h5 class="card-title">Course Name - {{course.name}}</h5>
+          <h5 class="card-title">Course Name - {{course.name | uppercase | lowercase}}</h5>
         <p class="card-text">Duration - {{course.duration}}</p>
-        <p class="card-text">Price - {{course.price}}</p>
+        <p class="card-text">Price - {{course.price | currency:currencyCode:false:'8.1-1'}}</p>
         <p class="card-text">Instructor - {{course.instructor}}</p>
+        <p class="card-text">Starting on - {{course.startDate | date:'dd/MMM/yyyy LLLL'}}</p>
+        <p class="card-text">Rating - {{course.rating }}</p>
+
         <a (click)="details(course)" class="btn btn-primary" 
             [style.backgroundColor]="course.offer? 'blue':'green'">Details</a>
             <!-- class binding-->
