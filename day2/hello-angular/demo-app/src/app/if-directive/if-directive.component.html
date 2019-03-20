@@ -1,3 +1,20 @@
-<p>
-  if-directive works!
-</p>
+<div class="container" style="margin-top:20px">
+  <div class="row">
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="selectedUser === 'user'" (click)="selectedUser = 'user'">Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [class.active]="selectedUser === 'admin'" (click)="selectedUser = 'admin'">Admins</a>
+      </li>
+    </ul>
+    <div class="row" *ngIf="selectedUser === 'user'">
+      <h2>Users</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate molestiae molestias unde quae perspiciatis sequi nostrum nisi culpa. Sequi.</p>
+    </div>
+    <div class="row" *ngIf="selectedUser === 'admin'">
+        <h2>Admins</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate molestiae molestias unde quae perspiciatis sequi nostrum nisi culpa. Sequi.</p>
+      </div>
+  </div>
+</div>
