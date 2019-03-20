@@ -65,5 +65,16 @@ export class CourseComponent {
   details(course){
     console.log(`came inside the details method.. ${course.name}`)
   }
+
+  addCourse(courseName){
+    let course:any = {};
+    course.duration = 10;
+    course.price = 5000;
+    course.offer = false;
+    course.instructor  ="John";
+    course.name = courseName.value;
+
+    this.courses.push(course);
+  }
   
 }
