@@ -76,5 +76,11 @@ export class CourseComponent {
 
     this.courses.push(course);
   }
+
+  deleteCourse(courseName){
+    console.log(courseName);  
+    let index = this.courses.findIndex((course)=> course.name === courseName);
+    this.courses.splice(index, 1);
+  }
   
 }
