@@ -12,6 +12,7 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { OrderByPipe } from './order-by.pipe';
 import { IfDirectiveComponent } from './if-directive/if-directive.component';
+import { CourseService } from './course.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { IfDirectiveComponent } from './if-directive/if-directive.component';
     FormsModule
 
   ],
-  providers: [],
+  providers: [CourseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

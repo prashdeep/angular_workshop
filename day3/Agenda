@@ -7,8 +7,15 @@
  Event binding
  Template literals
  Pipes
+ Buit in Directives
+    ngIf
+    ngIfElse
+    ngSwitch 
  Services 
  Dependency Injection
  Input and Output decorators
  Component Life cycle methods
-. Directives 
+ Forms 
+    Template driven Forms
+    Model driven Forms
+. 

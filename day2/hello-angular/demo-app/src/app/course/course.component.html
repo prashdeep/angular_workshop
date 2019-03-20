@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row">
+  <div class="row" *ngIf="courses.length > 0">
     <div class="card" 
         style="border:1px solid black;"  
         [style.backgroundColor]="course.offer? 'white':'white'" 
@@ -28,6 +28,9 @@
         <button class="btn btn-danger" (click)="deleteCourse(course.name)">Delete</button>
       </div>
     </div>
+  </div>
+  <div *ngIf="courses.length === 0">
+    <h2>There are no courses available</h2>
   </div>
 </div>
 

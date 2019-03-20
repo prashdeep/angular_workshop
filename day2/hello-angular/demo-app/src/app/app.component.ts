@@ -9,3 +9,5 @@ export class AppComponent {
   title = 'Hello World !!';
   courseName = "Angular 7 workshop."
 }
+
+
