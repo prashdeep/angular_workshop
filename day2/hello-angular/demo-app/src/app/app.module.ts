@@ -9,6 +9,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { MainComponent } from './main/main.component';
 import { TestModule } from './test/test.module';
 import { FooterComponent } from './footer/footer.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
     NavbarComponent,
     SidebarComponent,
     MainComponent,
-    FooterComponent
+    FooterComponent,
+    EventBindingComponent
     
   ],
   imports: [
