@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CourseComponent {
 
+  availOffer:boolean = false;
+
     courses=[
       {
        name:"React",
@@ -75,7 +77,7 @@ export class CourseComponent {
     course.name = courseName.value;
 
     this.courses.push(course);
-    
+
   }
 
   deleteCourse(courseName){
@@ -83,5 +85,12 @@ export class CourseComponent {
     let index = this.courses.findIndex((course)=> course.name === courseName);
     this.courses.splice(index, 1);
   }
+
+  handleOffer(){
+    //console.log(`The checkbox status is ${status}`)
+    this.courses.forEach(course => course.offer = this.availOffer);
+  }
+
+
   
 }

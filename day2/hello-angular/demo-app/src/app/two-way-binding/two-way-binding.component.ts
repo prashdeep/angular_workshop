@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
      <div>
      <input type="text" [(ngModel)]="propName" placeholder="enter your name">
+     
      </div>
      <div style="margin-top:20px">
        <span class="alert alert-success">{{propName}}</span>

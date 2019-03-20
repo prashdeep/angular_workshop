@@ -23,9 +23,21 @@
                [class.btn-primary]="course.offer" 
                [class.btn-secondary]="!course.offer">Checkout</a>
         <button class="btn btn-danger" (click)="deleteCourse(course.name)">Delete</button>
+
       </div>
     </div>
   </div>
 </div>
 
 <input type="text" #courseName (change)="addCourse(courseName)" placeholder="enter the course name">
+<div style="margin-bottom:20px;">
+<input type="checkbox" 
+      [(ngModel)]="availOffer" 
+       (change)="handleOffer(availOffer)" >Avail Offer
+</div>
+
+<div style="margin-bottom:40px" class="row">
+   <span class="alert" [class.alert-success]="availOffer" [class.alert-warning]="!availOffer">
+      Offer Available {{availOffer}}
+   </span>
+</div>
