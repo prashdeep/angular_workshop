@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { OrderByPipe } from './order-by.pipe';
+import { IfDirectiveComponent } from './if-directive/if-directive.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { OrderByPipe } from './order-by.pipe';
     FooterComponent,
     EventBindingComponent,
     TwoWayBindingComponent,
-    OrderByPipe
+    OrderByPipe,
+    IfDirectiveComponent
     
   ],
   imports: [
