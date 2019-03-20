@@ -1,0 +1,4 @@
+Interpolation {{}}
+Property Binding []
+style binding [style.value]
+class binding [class.className]

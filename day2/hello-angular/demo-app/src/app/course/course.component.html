@@ -1,12 +1,27 @@
 <div class="container">
   <div class="row">
-    <div class="card" style="border:1px solid black;" class="col-md-4" *ngFor="let course of courses">
+    <div class="card" 
+        style="border:1px solid black;"  
+        [style.backgroundColor]="course.offer? 'green':'blue'" 
+        class="col-md-4" 
+        *ngFor="let course of courses">
       <div class="card-body">
-        <h5 class="card-title">Course Name - {{course.name}}</h5>
+        <!-- 
+          Interpolation
+          <img src="{{course.imgSrc}}" style="width:100px; height:100px;"/> -->
+          <!-- Property Binding-->
+          <img [src]="course.imgSrc" style="width:100px; height:100px;"/>
+          <h5 class="card-title">Course Name - {{course.name}}</h5>
         <p class="card-text">Duration - {{course.duration}}</p>
         <p class="card-text">Price - {{course.price}}</p>
         <p class="card-text">Instructor - {{course.instructor}}</p>
-        <a (click)="details(course)" class="btn btn-primary">Details</a>
+        <a (click)="details(course)" class="btn btn-primary" 
+            [style.backgroundColor]="course.offer? 'blue':'green'">Details</a>
+            <!-- class binding-->
+            <a (click)="details(course)" 
+               class="btn" 
+               [class.btn-primary]="course.offer" 
+               [class.btn-secondary]="!course.offer">Checkout</a>
       </div>
     </div>
   </div>

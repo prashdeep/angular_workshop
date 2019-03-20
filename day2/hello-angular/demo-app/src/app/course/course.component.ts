@@ -12,37 +12,53 @@ export class CourseComponent {
        name:"React",
        duration: 10,
        price:15000,
-       instructor: "Kishore"
+       offer:true,
+       instructor: "Kishore",
+       imgSrc:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
       },
       {
         name:"Java 8",
         duration: 8,
         price:10000,
-        instructor: "Vinod"
+        offer:false,
+        instructor: "Vinod",
+        imgSrc:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
        },
        {
         name:"Angular",
         duration: 10,
         price:18000,
-        instructor: "Vikas"
+        offer:false,
+        instructor: "Vikas",
+        imgSrc:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+
        },
        {
         name:"Spring Boot",
         duration: 10,
         price:25000,
-        instructor: "Vishnu"
+        offer:true,
+        instructor: "Vishnu",
+        imgSrc:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+
        },
        {
         name:"VueJs",
         duration: 10,
         price:15000,
-        instructor: "Aman"
+        offer:true,
+        instructor: "Aman",
+        imgSrc:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+
        },
        {
         name:"Webpack",
         duration: 2,
         price:5000,
-        instructor: "Aman"
+        offer:false,
+        instructor: "Aman",
+        imgSrc:"https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+
        } 
   ]
 
