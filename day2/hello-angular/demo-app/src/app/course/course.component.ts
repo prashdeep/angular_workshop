@@ -75,6 +75,7 @@ export class CourseComponent {
     course.name = courseName.value;
 
     this.courses.push(course);
+    
   }
 
   deleteCourse(courseName){
