@@ -18,3 +18,40 @@
       </div>
   </div>
 </div>
+
+<ng-container *ngIf="selectedUser === 'user'; else admin">
+  <div>
+      <h2>Users - with Ng If template</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate molestiae molestias unde quae perspiciatis sequi nostrum nisi culpa. Sequi.</p>
+  </div>
+</ng-container>
+<ng-template #admin>
+  <div>
+      <h2>Admins - with Ng If template</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate molestiae molestias unde quae perspiciatis sequi nostrum nisi culpa. Sequi.</p>
+   </div>
+</ng-template>
+
+<span [ngSwitch]="selectedUser">
+<div *ngSwitchCase="'user'">
+    <div>
+        <h2>Users - with Ng Switch template</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate molestiae molestias unde quae perspiciatis sequi nostrum nisi culpa. Sequi.</p>
+    </div>
+  </div>
+
+  <h2>Selected User - {{selectedUser}}</h2>
+<div *ngSwitchCase="'admin'">
+    <div>
+        <h2>Admins - with Ng Switch template</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate molestiae molestias unde quae perspiciatis sequi nostrum nisi culpa. Sequi.</p>
+     </div>
+    </div>
+<div *ngSwitchDefault>
+    <div>
+        <h2>Users - with Ng Switch template</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur cupiditate molestiae molestias unde quae perspiciatis sequi nostrum nisi culpa. Sequi.</p>
+    </div>
+  </div>
+</span>
+
