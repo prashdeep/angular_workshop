@@ -5,8 +5,8 @@ import { Component, OnInit } from '@angular/core';
   template: `
      <div>
        <h1>Inline HTML markup</h1>
-        <input type="text" (keyup.enter)="handleChange($event)" placeholder="enter text">
-        <input type="text" #inputValue (keyup.enter)="handleChange(inputValue)" placeholder="enter text">
+        <input type="text" (keyup.enter)="handleChange($event)" placeholder="using standard dom">
+        <input type="text" #inputValue (keyup.enter)="handleChange (inputValue)" placeholder="using template variable">
 
         <button  (click)="handleClick()" class='btn btn-primary'>Click Me</button>
      </div>
