@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Config } from '../Config';
 import { Course } from '../Course';
 import { CourseService } from '../course.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-course',
@@ -15,7 +16,9 @@ export class CourseComponent implements OnInit {
   currencyCode = Config.currency;
 
   //Angular will add the dependency during creation of the component.
-  constructor(private courseService:CourseService){
+  constructor(
+    private courseService:CourseService, 
+    private router:Router){
   }
   ngOnInit(): void {
     this.courses = this.courseService.fetchAllCourses();
@@ -45,5 +48,6 @@ export class CourseComponent implements OnInit {
 
   handleSelectedCourse(selectedCourse:Course){
     console.log("Selected course is "+ selectedCourse.name);
+    this.router.navigate([`/courses/${selectedCourse.id}`]);
   }
 }
