@@ -1,16 +1,21 @@
 <div class="container">
-  <div class="row" *ngIf="courses.length > 0">
+    <div class="row" *ngIf="courses.length > 0">
+      <div *ngFor="let course of courses">
+        <app-course-details [course]="course" (selected)="handleSelectedCourse($event)"></app-course-details>
+      </div>
+    </div>
+  <!--<div class="row" *ngIf="courses.length > 0">
     <div class="card" 
         style="border:1px solid black;"  
         [style.backgroundColor]="course.offer? 'white':'white'" 
         class="col-md-4" 
         *ngFor="let course of courses | orderBy:false">
-      <div class="card-body">
+      <div class="card-body">-->
         <!-- 
           Interpolation
           <img src="{{course.imgSrc}}" style="width:100px; height:100px;"/> -->
           <!-- Property Binding-->
-          <img [src]="course.imgSrc" style="width:100px; height:100px;"/>
+          <!--<img [src]="course.imgSrc" style="width:100px; height:100px;"/>
           <h5 class="card-title">Course Name - {{course.name | uppercase | lowercase}}</h5>
         <p class="card-text">Duration - {{course.duration}}</p>
         <p class="card-text">Price - {{course.price | currency:currencyCode:false:'8.1-1'}}</p>
@@ -19,16 +24,16 @@
         <p class="card-text">Rating - {{course.rating | number:'1.1-1'}}</p>
 
         <a (click)="details(course)" class="btn btn-primary" 
-            [style.backgroundColor]="course.offer? 'blue':'green'">Details</a>
+            [style.backgroundColor]="course.offer? 'blue':'green'">Details</a>-->
             <!-- class binding-->
-            <a (click)="details(course)" 
+            <!--<a (click)="details(course)" 
                class="btn" 
                [class.btn-primary]="course.offer" 
                [class.btn-secondary]="!course.offer">Checkout</a>
         <button class="btn btn-danger" (click)="deleteCourse(course.name)">Delete</button>
       </div>
     </div>
-  </div>
+  </div> -->
   <div *ngIf="courses.length === 0">
     <h2>There are no courses available</h2>
   </div>

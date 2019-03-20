@@ -42,4 +42,8 @@ export class CourseComponent implements OnInit {
     //console.log(`The checkbox status is ${status}`)
     this.courses.forEach(course => course.offer = this.availOffer);
   }
+
+  handleSelectedCourse(selectedCourse:Course){
+    console.log("Selected course is "+ selectedCourse.name);
+  }
 }

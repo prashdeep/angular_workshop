@@ -13,6 +13,7 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
 import { OrderByPipe } from './order-by.pipe';
 import { IfDirectiveComponent } from './if-directive/if-directive.component';
 import { CourseService } from './course.service';
+import { CourseDetailsComponent } from './course-details/course-details.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CourseService } from './course.service';
     EventBindingComponent,
     TwoWayBindingComponent,
     OrderByPipe,
-    IfDirectiveComponent
+    IfDirectiveComponent,
+    CourseDetailsComponent
     
   ],
   imports: [

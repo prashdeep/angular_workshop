@@ -1,0 +1,14 @@
+
+<div class="card">
+  <img [src]="imageUrl" alt="{{description}}" style="width:100px; height:100px;"/>
+    <h5 class="card-header">{{course.name}}</h5>
+    <div class="card-body">
+        <p class="card-text">Duration - {{course.duration}}</p>
+        <p class="card-text">Price - {{course.price | currency:currencyCode:false:'8.1-1'}}</p>
+        <p class="card-text">Instructor - {{course.instructor}}</p>
+        <p class="card-text">Starting on - {{course.startDate | date:'dd/MMM/yyyy LLLL'}}</p>
+        <p class="card-text">Rating - {{course.rating | number:'1.1-1'}}</p>
+
+      <a (click)="courseSelected(course)" class="btn btn-primary">Select</a>
+    </div>
+  </div>
