@@ -10,6 +10,7 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import { OrderByPipe } from './order-by.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
     MainComponent,
     FooterComponent,
     EventBindingComponent,
-    TwoWayBindingComponent
+    TwoWayBindingComponent,
+    OrderByPipe
     
   ],
   imports: [

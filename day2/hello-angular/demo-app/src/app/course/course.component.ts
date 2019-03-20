@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Config } from '../Config';
+import { Course } from '../Course';
 
 @Component({
   selector: 'app-course',
@@ -10,7 +11,7 @@ export class CourseComponent {
 
   availOffer:boolean = false;
 
-    courses=[
+    courses:Course[]=[
       {
        name:"React",
        duration: 10,

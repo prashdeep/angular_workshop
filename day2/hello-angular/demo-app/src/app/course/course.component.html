@@ -4,7 +4,7 @@
         style="border:1px solid black;"  
         [style.backgroundColor]="course.offer? 'white':'white'" 
         class="col-md-4" 
-        *ngFor="let course of courses">
+        *ngFor="let course of courses | orderBy:false">
       <div class="card-body">
         <!-- 
           Interpolation
@@ -16,7 +16,7 @@
         <p class="card-text">Price - {{course.price | currency:currencyCode:false:'8.1-1'}}</p>
         <p class="card-text">Instructor - {{course.instructor}}</p>
         <p class="card-text">Starting on - {{course.startDate | date:'dd/MMM/yyyy LLLL'}}</p>
-        <p class="card-text">Rating - {{course.rating }}</p>
+        <p class="card-text">Rating - {{course.rating | number:'1.1-1'}}</p>
 
         <a (click)="details(course)" class="btn btn-primary" 
             [style.backgroundColor]="course.offer? 'blue':'green'">Details</a>
@@ -37,6 +37,14 @@
 <input type="checkbox" 
       [(ngModel)]="availOffer" 
        (change)="handleOffer(availOffer)" >Avail Offer
+</div>
+
+<div>
+  <select name="orderByValue"[(ngModel)]="selectedValue" id="">
+    <option value="name">Name</option>
+    <option value="price">Price</option>
+    <option value="rating">Rating</option>
+  </select>
 </div>
 
 <div style="margin-bottom:40px" class="row">
