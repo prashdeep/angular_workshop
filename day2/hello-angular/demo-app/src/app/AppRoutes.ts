@@ -11,6 +11,7 @@ import { FrontendComponent } from './frontend/frontend.component';
 import { DataSharingComponent } from './data-sharing/data-sharing.component';
 import { FormsComponent } from './forms/forms.component';
 import { TformComponent } from './tform/tform.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 export const routes:Route[]=[
   {
@@ -64,6 +65,14 @@ export const routes:Route[]=[
         {
             path:'',
             component:TformComponent
+        },
+        {
+            path:'template',
+            component:TformComponent
+        },
+        {
+            path:'reactive',
+            component:ReactiveFormComponent
         }
     ]
    } ,
