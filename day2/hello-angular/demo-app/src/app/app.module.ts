@@ -16,6 +16,8 @@ import { RouterModule } from '@angular/router';
 import { routes } from './AppRoutes';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailsComponent } from './details/details.component';
+import { BackendComponent } from './backend/backend.component';
+import { FrontendComponent } from './frontend/frontend.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { DetailsComponent } from './details/details.component';
     IfDirectiveComponent,
     CourseDetailsComponent,
     NotFoundComponent,
-    DetailsComponent
+    DetailsComponent,
+    BackendComponent,
+    FrontendComponent
   ],
   imports: [
     BrowserModule,

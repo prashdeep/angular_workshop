@@ -15,6 +15,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventBindingComponent {
 
+  constructor(){
+    console.log('came inside the event component constructor')
+  }
+
   /*handleChange($event){
     console.log('Inside the handle change event');
     console.log($event.target.value);

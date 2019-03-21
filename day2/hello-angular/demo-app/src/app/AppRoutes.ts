@@ -6,6 +6,8 @@ import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { DetailsComponent } from './details/details.component';
+import { BackendComponent } from './backend/backend.component';
+import { FrontendComponent } from './frontend/frontend.component';
 
 export const routes:Route[]=[
   {
@@ -15,7 +17,22 @@ export const routes:Route[]=[
   },
   {
     'path':'courses',
-    component:CourseComponent
+    component:CourseComponent,
+    children:[
+        {
+            path:'',
+            component:BackendComponent
+            
+        },
+        {
+            path:'backend',
+            component:BackendComponent
+        },
+        {
+            path:'frontend',
+            component:FrontendComponent
+        }
+    ]
   },
   {
       path:'events',

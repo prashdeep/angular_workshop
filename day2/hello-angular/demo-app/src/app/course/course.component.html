@@ -1,10 +1,23 @@
+<nav class="nav nav-pills nav-fill">
+    <a class="nav-item nav-link" [routerLink]="[ 'backend' ]" routerLinkActive="active">Backend</a>
+    <a class="nav-item nav-link" [routerLink]="[ 'frontend' ]" routerLinkActive="active">FrontEnd</a>
+</nav>
+
 <div class="container">
+  <div class="row">
+    <div class="col-md-8">
+        <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<!--<div class="container">
     <div class="row" *ngIf="courses.length > 0">
       <div *ngFor="let course of courses">
         <app-course-details [course]="course" 
              (selected)="handleSelectedCourse($event)"></app-course-details>
       </div>
-    </div>
+    </div>-->
   <!--<div class="row" *ngIf="courses.length > 0">
     <div class="card" 
         style="border:1px solid black;"  
@@ -35,10 +48,10 @@
       </div>
     </div>
   </div> -->
-  <div *ngIf="courses.length === 0">
+  <!--<div *ngIf="courses.length === 0">
     <h2>There are no courses available</h2>
   </div>
-</div>
+</div>-->
 
 <!--<input type="text" #courseName (change)="addCourse(courseName)" placeholder="enter the course name">
 <div style="margin-bottom:20px;">

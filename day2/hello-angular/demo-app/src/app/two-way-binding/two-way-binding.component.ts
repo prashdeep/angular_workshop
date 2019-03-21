@@ -15,5 +15,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoWayBindingComponent{
 
+  constructor(){
+    console.log('came inside the twoway data binding componenet')
+  }
+
    propName = "Hello Angular !!"
 }
