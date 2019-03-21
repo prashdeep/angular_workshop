@@ -1,3 +1,53 @@
-<p>
-  reactive-form works!
-</p>
+<div *ngIf="form.errors">
+    <span class="alert alert-danger">{{form.errors.invalidcourseName}}</span>
+</div>
+  <form [formGroup]="form" (ngSubmit)="submitForm(form)" class="col-md-8">
+    <div class="form-group">
+      <label for="courseName">Name</label>
+      <input 
+          type="text" 
+          class="form-control" 
+          name="courseName" 
+          formControlName="firstName"
+          id="firstName" 
+          aria-describedby="firstName" 
+          placeholder="First Name">
+    </div>
+    <div *ngIf="firstName.touched && firstName.invalid">
+        <span class="alert alert-danger">Invalid input value</span>
+    </div>
+    <div class="form-group">
+      <label for="duration">Duration</label>
+      <input 
+        type="text" 
+        class="form-control" 
+        name="duration" 
+        id="duration"
+        formControlName="duration"
+        aria-describedby="duration" 
+        placeholder="duration">
+    </div>
+    <div *ngIf="duration.touched && duration.invalid">
+      <span class="alert alert-danger">Invalid input value</span>
+  </div>
+   <div class="form-group">
+      <label for="price">Price</label>
+      <input 
+          type="text"
+          class="form-control"
+          name="price"
+          id="price"
+          formControlName="price"
+          aria-describedby="price"
+          placeholder="Price">
+    </div>
+    <div *ngIf="price.touched && price.invalid">
+      <span class="alert alert-danger">Invalid input value</span>
+  </div>
+   <button 
+        type="submit" 
+        name="submit" 
+        id="submit"
+        class="btn btn-primary" 
+        btn-lg btn-block>Save</button>
+  </form>
