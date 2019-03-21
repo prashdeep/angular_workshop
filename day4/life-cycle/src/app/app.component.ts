@@ -29,7 +29,7 @@ export class AppComponent {
   }
 
   addUser(){
-    //this.users.push({id:Math.random()* 1000});
-    this.users = this.users.concat({id:Math.random()* 1000});
+    this.users.push({id:Math.random()* 1000});
+    //this.users = this.users.concat({id:Math.random()* 1000});
   }
 }

@@ -10,13 +10,13 @@ import { Component,
   selector: 'app-child',
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css'],
-  changeDetection:ChangeDetectionStrategy.OnPush
+  changeDetection:ChangeDetectionStrategy.Default
   
   
 })
 export class ChildComponent implements OnInit {
 
-  @Input() users=[];
+  @Input() users;
 
   constructor(changeDetector: ChangeDetectorRef){
     console.log('inside the constructor of child component');

@@ -8,6 +8,7 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
 import { DetailsComponent } from './details/details.component';
 import { BackendComponent } from './backend/backend.component';
 import { FrontendComponent } from './frontend/frontend.component';
+import { DataSharingComponent } from './data-sharing/data-sharing.component';
 
 export const routes:Route[]=[
   {
@@ -50,6 +51,10 @@ export const routes:Route[]=[
       path:'courses/:id',
       component:DetailsComponent  
   },
+  {
+    path:'data-sharing',
+    component:DataSharingComponent  
+   } ,
   {
       path:'**',
       component:NotFoundComponent

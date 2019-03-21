@@ -18,6 +18,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { DetailsComponent } from './details/details.component';
 import { BackendComponent } from './backend/backend.component';
 import { FrontendComponent } from './frontend/frontend.component';
+import { CompOneComponent } from './comp-one/comp-one.component';
+import { CompTwoComponent } from './comp-two/comp-two.component';
+import { DataSharingComponent } from './data-sharing/data-sharing.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { FrontendComponent } from './frontend/frontend.component';
     NotFoundComponent,
     DetailsComponent,
     BackendComponent,
-    FrontendComponent
+    FrontendComponent,
+    CompOneComponent,
+    CompTwoComponent,
+    DataSharingComponent
   ],
   imports: [
     BrowserModule,
