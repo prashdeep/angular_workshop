@@ -1,0 +1,24 @@
+Day4 Agenda
+---------------
+   
+1. Component Lifecycle
+2. Forms 
+    Template driven Forms
+    Reactive forms 
+    Validations 
+    Form Submission
+3. Observable
+     subscribe
+     Error handling
+4. Component to component communication
+5. Change detection
+     onPush
+     Default 
+6. Content projection 
+7. Kendo UI 
+     installation and setup 
+     Demo 
+8. JWT tokens for Authentication
+9  Localstorage, Session storage 
+
+    
