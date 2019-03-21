@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+        <form #f="ngForm" (ngSubmit)="handleSubmit(f)">
+            <div class="form-group">
+              <label> First Name</label>
+              <input type="text"
+                class="form-control" 
+                name="firstname" 
+                id="firstname" 
+                required
+                minlength="4"
+                ngModel 
+                #firstName="ngModel"
+                placeholder="Enter First Name">
+            </div>
+            <div *ngIf="firstName.touched && firstName.invalid" >
+              <div *ngIf="firstName.errors.required">
+                  <span class="alert alert-danger">First name should be of 4 characters</span>
+              </div>
+              <div *ngIf="firstName.errors.minlength">
+                  <span class="alert alert-danger">First name is required</span>
+              </div>
+            </div>
+            <div class="form-group">
+                <label> Last Name</label>
+                <input type="text"
+                  class="form-control" 
+                  name="lastname" 
+                  id="lastname" 
+                  required
+                  ngModel 
+                  #lastName="ngModel"
+                  minlength="5"
+                  maxlength="8"
+                  placeholder="Enter Last Name">
+              </div>
+              <div *ngIf="lastName.touched && lastName.invalid" >
+                  <div *ngIf="lastName.errors.required">
+                      <span class="alert alert-danger">Last name should be of 4 characters</span>
+                  </div>
+                  <div *ngIf="lastName.errors.minlength">
+                      <span class="alert alert-danger">Last name is required</span>
+                  </div>
+                </div>
+              <div class="form-group">
+                  <label> Email</label>
+                  <input type="email"
+                    class="form-control" 
+                    name="email" 
+                    id="email" 
+                    placeholder="Enter Email">
+                </div>
+                <button 
+                   class="btn btn-primary"
+                   [disabled]="f.invalid">Submit</button>
+          </form>
+    </div>
+  </div>
+  
+</div>

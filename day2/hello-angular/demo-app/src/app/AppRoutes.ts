@@ -9,6 +9,8 @@ import { DetailsComponent } from './details/details.component';
 import { BackendComponent } from './backend/backend.component';
 import { FrontendComponent } from './frontend/frontend.component';
 import { DataSharingComponent } from './data-sharing/data-sharing.component';
+import { FormsComponent } from './forms/forms.component';
+import { TformComponent } from './tform/tform.component';
 
 export const routes:Route[]=[
   {
@@ -54,6 +56,16 @@ export const routes:Route[]=[
   {
     path:'data-sharing',
     component:DataSharingComponent  
+   } ,
+   {
+    path:'forms',
+    component:FormsComponent,
+    children:[
+        {
+            path:'',
+            component:TformComponent
+        }
+    ]
    } ,
   {
       path:'**',

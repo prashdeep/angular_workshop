@@ -21,6 +21,8 @@ import { FrontendComponent } from './frontend/frontend.component';
 import { CompOneComponent } from './comp-one/comp-one.component';
 import { CompTwoComponent } from './comp-two/comp-two.component';
 import { DataSharingComponent } from './data-sharing/data-sharing.component';
+import { TformComponent } from './tform/tform.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { DataSharingComponent } from './data-sharing/data-sharing.component';
     FrontendComponent,
     CompOneComponent,
     CompTwoComponent,
-    DataSharingComponent
+    DataSharingComponent,
+    TformComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
