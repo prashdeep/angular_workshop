@@ -12,6 +12,8 @@ import { DataSharingComponent } from './data-sharing/data-sharing.component';
 import { FormsComponent } from './forms/forms.component';
 import { TformComponent } from './tform/tform.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { UsersComponent } from './users/users.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 export const routes:Route[]=[
   {
@@ -75,6 +77,14 @@ export const routes:Route[]=[
             component:ReactiveFormComponent
         }
     ]
+   } ,
+   {
+    path:'users',
+    component:UsersComponent  
+   } ,
+   {
+    path:'users/:id',
+    component:UserDetailsComponent  
    } ,
   {
       path:'**',

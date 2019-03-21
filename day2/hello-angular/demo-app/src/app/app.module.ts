@@ -24,6 +24,9 @@ import { DataSharingComponent } from './data-sharing/data-sharing.component';
 import { TformComponent } from './tform/tform.component';
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { UsersComponent } from './users/users.component';
+import { HttpClientModule } from '@angular/common/http';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -47,12 +50,15 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     DataSharingComponent,
     TformComponent,
     FormsComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    UsersComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     RouterModule.forRoot(routes)
 
   ],
