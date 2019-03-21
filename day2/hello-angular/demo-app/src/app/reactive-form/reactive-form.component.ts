@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { CustomValidators } from '../CustomValidators';
+//import { CustomValidators } from '../CustomValidators';
 
 @Component({
   selector: 'app-rform',
