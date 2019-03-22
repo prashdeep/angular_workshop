@@ -34,6 +34,17 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
  * Angular video series https://www.youtube.com/user/koushks/playlists?view=50&sort=dd&shelf_id=13
 
 
+ ## Angular CLI commands
+
+ * Creating a component: `ng generate comp-name `| `ng g c comp-name `
+ * Creating a service:  `ng generate service`| `ng g s service`
+ * Creating a pipe: `ng generate pipe pipe-name`| `ng g p pipe-name`
+ * Creating a module: `ng generate module module-name` | `ng g m module-name`
+ * Running test files: `ng test`
+ * Getting the coverage report: `ng test --code-coverage`
+ * Adding dependency: `npm install dependency-name --save`  
+
+
 
 ## Further help
 
