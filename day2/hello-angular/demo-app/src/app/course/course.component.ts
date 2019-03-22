@@ -3,6 +3,7 @@ import { Config } from '../Config';
 import { Course } from '../Course';
 import { CourseService } from '../course.service';
 import { Router } from '@angular/router';
+import {environment} from '../../environments/environment'
 
 @Component({
   selector: 'app-course',
@@ -14,14 +15,17 @@ export class CourseComponent implements OnInit {
   availOffer:boolean = false;
   courses:Course[] = [];
   currencyCode = Config.currency;
+  url:string;
 
   //Angular will add the dependency during creation of the component.
   constructor(
     private courseService:CourseService, 
-    private router:Router){
+    private router:Router,
+   ){
   }
   ngOnInit(): void {
     this.courses = this.courseService.fetchAllCourses();
+    this.url = environment.config_url.auth_url;
   }
   details(course){
     console.log(`came inside the details method.. ${course.name}`)

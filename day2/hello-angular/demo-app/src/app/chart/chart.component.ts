@@ -18,7 +18,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChartComponent implements OnInit {
 
-  private seriesData:any;
+   seriesData:any;
   constructor() { }
 
   ngOnInit() {

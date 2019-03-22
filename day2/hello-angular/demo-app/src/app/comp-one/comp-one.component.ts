@@ -7,8 +7,8 @@ import { DataService } from '../data.service';
   styleUrls: ['./comp-one.component.css']
 })
 export class CompOneComponent implements OnInit {
-
-  constructor(private dataService:DataService) { }
+  dataService;
+  constructor( dataService:DataService) { }
 
   ngOnInit() {
   }

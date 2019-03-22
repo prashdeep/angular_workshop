@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "demo-app": {
+    "multi-module": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/demo-app",
+            "outputPath": "dist/multi-module",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,9 +23,6 @@
               "src/assets"
             ],
             "styles": [
-              {
-                "input": "node_modules/@progress/kendo-theme-default/dist/all.css"
-              },
               "src/styles.css"
             ],
             "scripts": []
@@ -35,7 +32,7 @@
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.stage.ts"
+                  "with": "src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -60,19 +57,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "demo-app:build"
+            "browserTarget": "multi-module:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "demo-app:build:production"
+              "browserTarget": "multi-module:build:production"
             }
-            
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "demo-app:build"
+            "browserTarget": "multi-module:build"
           }
         },
         "test": {
@@ -83,9 +79,6 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              {
-                "input": "node_modules/@progress/kendo-theme-default/dist/all.css"
-              },
               "src/styles.css"
             ],
             "scripts": [],
@@ -109,7 +102,7 @@
         }
       }
     },
-    "demo-app-e2e": {
+    "multi-module-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -118,11 +111,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "demo-app:serve"
+            "devServerTarget": "multi-module:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "demo-app:serve:production"
+              "devServerTarget": "multi-module:serve:production"
             }
           }
         },
@@ -138,5 +131,5 @@
       }
     }
   },
-  "defaultProject": "demo-app"
+  "defaultProject": "multi-module"
 }

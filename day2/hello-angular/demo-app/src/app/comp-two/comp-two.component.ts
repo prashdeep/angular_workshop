@@ -8,7 +8,8 @@ import { DataService } from '../data.service';
 })
 export class CompTwoComponent  {
 
-  constructor(private dataService:DataService) {
+  dataService
+  constructor( dataService:DataService) {
    }
 
    decrement(){

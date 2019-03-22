@@ -11,7 +11,7 @@ import { Subscription } from 'rxjs';
 })
 export class UserDetailsComponent implements OnInit {
 
-  private user:User;
+   user:User;
   private handle:Subscription;
   constructor(private router:ActivatedRoute, private userService:UsersService) { }
 

@@ -3,10 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  config_url:{
-    auth_url:'http://dev-server.com'
-  }
+  production: false
 };
 
 /*

@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent implements OnInit {
 
-  private courseId:number;
+   courseId:number;
   constructor(private activatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
