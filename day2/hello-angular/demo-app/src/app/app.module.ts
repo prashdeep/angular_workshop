@@ -27,6 +27,15 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { UsersComponent } from './users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { GridModule } from '@progress/kendo-angular-grid';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChartComponent } from './chart/chart.component';
+import { ChartsModule } from '@progress/kendo-angular-charts';
+import 'hammerjs';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -52,14 +61,18 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     FormsComponent,
     ReactiveFormComponent,
     UsersComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    ChartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    GridModule,
+    BrowserAnimationsModule,
+    ChartsModule
 
   ],
   providers: [],

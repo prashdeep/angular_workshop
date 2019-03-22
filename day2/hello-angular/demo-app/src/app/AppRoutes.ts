@@ -14,6 +14,7 @@ import { TformComponent } from './tform/tform.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { UsersComponent } from './users/users.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { ChartComponent } from './chart/chart.component';
 
 export const routes:Route[]=[
   {
@@ -85,6 +86,10 @@ export const routes:Route[]=[
    {
     path:'users/:id',
     component:UserDetailsComponent  
+   } ,
+   {
+    path:'charts',
+    component:ChartComponent  
    } ,
   {
       path:'**',

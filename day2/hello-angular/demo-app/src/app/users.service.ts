@@ -24,6 +24,7 @@ export class UsersService {
     console.log('The post data is ')
     console.log(JSON.stringify(user));
     return this.httpClient.
-    post('https://jsonplaceholder.typicode.com/users',JSON.stringify(user));
+    post('https://jsonplaceholder.typicode.com/users',
+    JSON.stringify(user));
   }
 }
