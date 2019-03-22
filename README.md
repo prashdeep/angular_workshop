@@ -23,13 +23,15 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
 ## Userful Resources
- *Blog on Angular and ASP core 
+ * Blog on Angular and ASP core  - 
   http://jasonwatmore.com/
   https://scotch.io/
-  
- *Video tutorials for foundation 
+
+ * Video tutorials for foundation - 
   https://www.youtube.com/user/kudvenkat/playlists
   https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q
+
+ * Angular video series https://www.youtube.com/user/koushks/playlists?view=50&sort=dd&shelf_id=13
 
 
 
